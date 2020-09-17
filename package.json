@@ -3,13 +3,30 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "jest"
   },
   "dependencies": {
+    "@koa/cors": "^3.1.0",
     "koa": "^2.13.0",
     "koa-body": "^4.2.0",
     "koa-router": "^9.4.0",
     "mongoose": "^5.10.5",
     "nodemon": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "jest": "^26.4.2",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.3.0"
+  },
+  "jest": {
+    "moduleFileExtensions": ["js", "jsx", "json", "ts", "tsx"],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "/coverage/"
+    ]
   }
 }

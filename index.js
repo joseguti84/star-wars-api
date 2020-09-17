@@ -3,6 +3,7 @@
 const Koa = require('koa');
 const Router = require('koa-router');
 const Routes = require('./routes');
+const cors = require('@koa/cors');
 
 const bodyParser = require('koa-body');
 const mongoose = require('mongoose');
@@ -22,9 +23,12 @@ mongoose.connect(
 
 app
     .use(bodyParser())
+    .use(cors())
     .use(router.routes())
-    .use(router.allowedMethods())
-    .listen(5000, () => {
-            console.log('running on port 5000');
-        }
-    );
+    .use(router.allowedMethods());
+
+const server = app.listen(5000, () =>{
+    console.log('running on port 5000');
+});
+
+module.exports = server;
