@@ -1,0 +1,15 @@
+{
+  "name": "star-wars-api",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-router": "^9.4.0",
+    "mongoose": "^5.10.5",
+    "nodemon": "^2.0.4"
+  }
+}
